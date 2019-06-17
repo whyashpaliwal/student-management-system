@@ -1,0 +1,232 @@
+object frmRegistration: TfrmRegistration
+  Left = 334
+  Top = 211
+  Width = 645
+  Height = 355
+  Caption = 'Student Management System >>Student Registration'
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlMain: TPanel
+    Left = 0
+    Top = 0
+    Width = 637
+    Height = 324
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    TabOrder = 0
+    object pnlRegister: TPanel
+      Left = 24
+      Top = 24
+      Width = 585
+      Height = 273
+      BevelInner = bvLowered
+      BevelWidth = 3
+      Color = 4802889
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      object lblStream: TLabel
+        Left = 120
+        Top = 176
+        Width = 145
+        Height = 23
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Stream'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblEducation: TLabel
+        Left = 120
+        Top = 144
+        Width = 145
+        Height = 23
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Education Year'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblAge: TLabel
+        Left = 120
+        Top = 112
+        Width = 145
+        Height = 25
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Age'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblName: TLabel
+        Left = 120
+        Top = 80
+        Width = 145
+        Height = 25
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Full Name'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblHeading: TLabel
+        Left = 120
+        Top = 24
+        Width = 329
+        Height = 33
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Student Details'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Century'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object edtName: TEdit
+        Left = 272
+        Top = 80
+        Width = 177
+        Height = 25
+        Cursor = crIBeam
+        Hint = 'Student Name'
+        AutoSize = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+      end
+      object comboxEducation: TComboBox
+        Left = 272
+        Top = 144
+        Width = 177
+        Height = 23
+        Hint = 'Select Year'
+        BevelInner = bvLowered
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ItemHeight = 15
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 2
+        Items.Strings = (
+          '1.  First Year'
+          '2. Second Year'
+          '3. Third Year'
+          '4. Final Year')
+      end
+      object comboxStream: TComboBox
+        Left = 272
+        Top = 176
+        Width = 177
+        Height = 23
+        Hint = 'Select Stream'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ItemHeight = 15
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+        Items.Strings = (
+          '1. CSE'
+          '2. IT'
+          '3. Mech'
+          '4. ENTC')
+      end
+      object btnRegister: TButton
+        Left = 232
+        Top = 216
+        Width = 80
+        Height = 30
+        Cursor = crHandPoint
+        Caption = 'Register'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 4
+        OnClick = btnRegisterClick
+      end
+      object edtAge: TEdit
+        Left = 272
+        Top = 112
+        Width = 177
+        Height = 25
+        Cursor = crIBeam
+        Hint = 'Student Age'
+        AutoSize = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        OnKeyPress = edtAgeKeyPress
+      end
+    end
+  end
+end

@@ -1,0 +1,123 @@
+unit uclAllClasses;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+
+{enumerations definition}
+
+  TEducation = (FirstYear=0, SecondYear, ThirdYear, FinalYear);
+  TStream = (CSE=0, IT, Mech, ENTC);
+  TRating = (OneStar=0, TwoStar, ThreeStar, FourStar, FiveStar);
+{==================== Course Class =====================}
+  TCourse = class
+  private
+    FDuration: Integer;
+    FCourseName: string;
+    FRatings: string;
+    procedure SetCourseName(const Value: string);
+    procedure SetDuration(const Value: Integer);
+    procedure SetRatings(const Value: string);
+
+  published
+    property CourseName : string read FCourseName write SetCourseName;
+    property CourseDuration : Integer read FDuration write SetDuration;
+    property Ratings : string read FRatings write SetRatings;
+  end;
+{==================== Student Class =====================}
+  TStudent = class
+  private
+   // FList : TStringList;
+    FName : string;
+    FAge : Integer;
+    FEducation, FStream: string;
+    FCourse : TStringList;
+    procedure SetName(const Value: string);
+    procedure SetAge(const Value: Integer);
+    procedure SetEducation(const Value: string);
+    procedure SetStream(const Value: string);
+    procedure SetCourse(const Value: TStringList);
+  public
+    {public Declarations}
+    constructor Create;
+  published
+    property Name : string read FName write SetName;
+    property Age : Integer read FAge write SetAge;
+    property Education  : string read FEducation write SetEducation;
+    property Stream : string read FStream write SetStream;
+    property Course : TStringList read FCourse write SetCourse;
+end;
+
+{==============================================================================}
+
+implementation
+
+{ TCourse }
+
+procedure TCourse.SetCourseName(const Value: string);
+begin
+  FCourseName := Value;
+end;
+
+procedure TCourse.SetDuration(const Value: Integer);
+begin
+  FDuration := Value;
+end;
+
+procedure TCourse.SetRatings(const Value: string);
+begin
+  FRatings := Value;
+end;
+
+{ TStudent }
+
+{
+  * TStudent Class Constructor
+  * It will inititialize the FCourse reference.
+}
+constructor TStudent.Create;
+begin
+  FCourse := TStringList.Create;
+end;
+
+{
+  * SetName procedure sets the FName : string private var of
+    TSudent class via Name property.
+}
+procedure TStudent.SetName(const Value: string);
+begin
+  FName := Value;
+end;
+
+{
+  * SetAge procedure is called by Age property of TSudent class
+    to set private var FAge : Integer
+}
+procedure TStudent.SetAge(const Value: Integer);
+begin
+  FAge := Value;
+end;
+
+{
+  * Set Education will gets a str
+}
+procedure TStudent.SetEducation(const Value: string);
+begin
+  FEducation := Value;
+end;
+
+procedure TStudent.SetStream(const Value: string);
+begin
+  FStream := Value;
+end;
+
+procedure TStudent.SetCourse(const Value: TStringList);
+begin
+  FCourse := Value;
+end;
+
+end.//end of classes unit

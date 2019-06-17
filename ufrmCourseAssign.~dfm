@@ -1,0 +1,256 @@
+object frmAssign: TfrmAssign
+  Left = 769
+  Top = 371
+  Width = 748
+  Height = 348
+  Caption = 'Student Management System >> Course Allocate/De-allocate'
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlAssign: TPanel
+    Left = 0
+    Top = 0
+    Width = 740
+    Height = 317
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    TabOrder = 0
+    object pnlContain: TPanel
+      Left = 32
+      Top = 32
+      Width = 673
+      Height = 249
+      BevelInner = bvLowered
+      BevelWidth = 3
+      BorderWidth = 1
+      BorderStyle = bsSingle
+      Color = 4802889
+      TabOrder = 0
+      object lblHeading: TLabel
+        Left = 32
+        Top = 48
+        Width = 281
+        Height = 33
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Allocate Course'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Century'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblStudentName: TLabel
+        Left = 32
+        Top = 96
+        Width = 129
+        Height = 23
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Student Name'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblCourses: TLabel
+        Left = 32
+        Top = 136
+        Width = 129
+        Height = 23
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Select Course'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblCourseD: TLabel
+        Left = 336
+        Top = 136
+        Width = 129
+        Height = 23
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Select Course'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblstudentNameD: TLabel
+        Left = 336
+        Top = 96
+        Width = 129
+        Height = 23
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Student Name'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Century'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object lblDeallocate: TLabel
+        Left = 336
+        Top = 48
+        Width = 281
+        Height = 33
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'De-Allocate Course'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Century'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Layout = tlCenter
+      end
+      object comboxStudentNameA: TComboBox
+        Left = 168
+        Top = 96
+        Width = 145
+        Height = 23
+        Hint = 'Select Student'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ItemHeight = 15
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+      end
+      object btnAllocate: TButton
+        Left = 120
+        Top = 176
+        Width = 85
+        Height = 30
+        Cursor = crHandPoint
+        Hint = 'Allocate'
+        Caption = 'Allocate'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 2
+        OnClick = btnAllocateClick
+      end
+      object comboxStudentNameD: TComboBox
+        Left = 472
+        Top = 96
+        Width = 145
+        Height = 23
+        Hint = 'Select Student'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ItemHeight = 15
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+      end
+      object btnDeallocate: TButton
+        Left = 432
+        Top = 176
+        Width = 85
+        Height = 30
+        Cursor = crHandPoint
+        Hint = 'Dellocate'
+        Caption = 'Deallocate'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 5
+        OnClick = btnDeallocateClick
+      end
+      object comboxDeallocate: TComboBox
+        Left = 472
+        Top = 136
+        Width = 145
+        Height = 23
+        Hint = 'Select Course'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ItemHeight = 15
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 4
+        OnDropDown = comboxDeallocateDropDown
+      end
+      object comboxAllocate: TComboBox
+        Left = 168
+        Top = 136
+        Width = 145
+        Height = 23
+        Hint = 'Select Course'
+        BevelInner = bvNone
+        BevelOuter = bvRaised
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ItemHeight = 15
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+      end
+    end
+  end
+end

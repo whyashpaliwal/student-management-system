@@ -1,0 +1,189 @@
+object frmNewCourse: TfrmNewCourse
+  Left = 314
+  Top = 250
+  Width = 645
+  Height = 348
+  Caption = 'Student Management System >> Introduce New Course'
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlNewCourse: TPanel
+    Left = 0
+    Top = 0
+    Width = 637
+    Height = 317
+    Align = alClient
+    BevelOuter = bvNone
+    BorderWidth = 2
+    Color = clWhite
+    TabOrder = 0
+  end
+  object pnlInner: TPanel
+    Left = 24
+    Top = 24
+    Width = 585
+    Height = 265
+    BevelInner = bvLowered
+    BevelWidth = 3
+    Color = 4802889
+    TabOrder = 1
+    object lblCourseName: TLabel
+      Left = 120
+      Top = 80
+      Width = 145
+      Height = 25
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Course Name'
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Century'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      Layout = tlCenter
+    end
+    object lblHGeading: TLabel
+      Left = 120
+      Top = 32
+      Width = 337
+      Height = 33
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Introduce New Course'
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Century'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Layout = tlCenter
+    end
+    object lblDuration: TLabel
+      Left = 120
+      Top = 120
+      Width = 145
+      Height = 25
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Duration'
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Century'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      Layout = tlCenter
+    end
+    object lblRating: TLabel
+      Left = 120
+      Top = 160
+      Width = 145
+      Height = 23
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Ratings'
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Century'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      Layout = tlCenter
+    end
+    object edtCourseName: TEdit
+      Left = 280
+      Top = 80
+      Width = 177
+      Height = 25
+      Cursor = crIBeam
+      Hint = 'Course Name'
+      AutoSize = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object edtDuration: TEdit
+      Left = 280
+      Top = 120
+      Width = 177
+      Height = 25
+      Cursor = crIBeam
+      Hint = 'Duration in months'
+      AutoSize = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      OnKeyPress = edtDurationKeyPress
+    end
+    object comboxRatings: TComboBox
+      Left = 280
+      Top = 160
+      Width = 177
+      Height = 23
+      Hint = 'Select Rating'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Roboto'
+      Font.Style = []
+      ItemHeight = 15
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      Items.Strings = (
+        '1 Star'
+        '2 Star'
+        '3 Star'
+        '4 Star'
+        '5 Star')
+    end
+    object btnAdd: TButton
+      Left = 240
+      Top = 208
+      Width = 80
+      Height = 27
+      Cursor = crHandPoint
+      Hint = 'Click to ADD course'
+      Caption = 'ADD'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Roboto'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      OnClick = btnAddClick
+    end
+  end
+end
